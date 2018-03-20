@@ -61,7 +61,7 @@ program
   .option('--nocss', 'No css file')
   .option('--notest', 'No test file')
   .option('--reactnative', 'Creates React Native components')
-  .option('--createindex', 'Create index file')
+  .option('--createindex', 'Creates index.js file for multple component imports')
   .option('-l, --less', 'Adds .less file to component')
   .option('-s, --sass', 'Adds .sass file to component')
   .option('-p, --proptypes', 'Adds prop-types to component')
@@ -178,7 +178,37 @@ function createFiles(componentName, componentPath, cssFileExt) {
 }
 
 /**
+<<<<<<< HEAD
  * Create index file
+=======
+ * Removes none directorys from array
+ *
+ * @param {String} folderPath - Folder path string
+ * @param {Array} folders - Array of folder names
+ * @returns {Promise<Array>} folders -  Directory only filtered array
+ */
+function removeNoneDir(folderPath, folders) {
+  return new Promise((resolve, reject) => {
+    const promises = [];
+    const filteredFoldersArr = [];
+    for (let i = 0; i < folders.length; i += 1) {
+      const folder = folders[i];
+      const tempPath = path.join(folderPath, folder);
+      promises.push(fs.isDirectory(tempPath));
+    }
+
+    Promise.all(promises)
+      .then(values => resolve(folders.filter((folder, i) => values[i])))
+      .catch(err => reject(err));
+  });
+}
+
+/**
+ * Creates index.js for multiple components imports.
+ * import example when index.js has been created in root of
+ * /components folder
+ * - import { Component1, Component2 } from './components'
+>>>>>>> Updated Readme.md
  *
  */
 function createIndex() {
