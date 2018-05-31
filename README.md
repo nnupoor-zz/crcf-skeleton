@@ -5,6 +5,8 @@
 
 ## About
 
+This package is built on top of [create-react-component-folder](https://github.com/snaerth/create-react-component-folder/).<br>
+It provides smoke tests along with normal test based on a flag.<br>
 Create React Component folder works on macOS, Windows, and Linux.<br>
 It creates **React** or **React Native** component folder structure with one command.<br>
 There is also support for Typescript, React Native, Less and Sass.
@@ -104,6 +106,7 @@ $ npx crcf --help
     -s, --scss        Adds .scss file to component
     -p, --proptypes   Adds prop-types to component
     -u, --uppercase   Component files start on uppercase letter
+    -s, --smoke       Add smoke testing to your components
     -h, --help        output usage information
 ```
 

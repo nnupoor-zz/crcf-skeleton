@@ -1,7 +1,7 @@
 {
-  "name": "create-react-component-folder",
-  "version": "0.1.17",
-  "description": "Creates single react component folder structure",
+  "name": "crcf-skeleton",
+  "version": "0.0.1",
+  "description": "Creates single react component folder structure with smoke testing",
   "main": "./lib/index",
   "readme": "README.md",
   "engines": {
@@ -21,15 +21,16 @@
     "components",
     "npm",
     "crcf",
+    "crcf-smoke",
     "create-react-app",
     "create-react-component",
     "create-react-component-folder"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/snaerth/create-react-component-folder"
+    "url": "git+https://github.com/nnupoor/crcf-skeleton"
   },
-  "author": "Snær Seljan Þóroddsson",
+  "author": "Neha Nupoor",
   "license": "MIT",
   "devDependencies": {
     "app-root-dir": "^1.0.2",
